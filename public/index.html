@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PONSVOL — volume lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PONSVOL<span class="dim"> // robinhood testnet 46630 · pons v2 volume lab</span></h1>
+  <div id="headstats" class="headstats">booting…</div>
+  <div id="mixerStats" class="dim" style="font-size:11px;margin-top:2px"></div>
+</header>
+
+<nav id="buttons">
+  <button id="bLaunch">Launch Token</button>
+  <button id="bWallets">Create Wallets</button>
+  <input id="wCount" type="number" value="100" min="1" max="250" title="wallet count" class="numin">
+  <input id="wFund" type="number" value="0.0002" min="0.0001" max="0.05" step="0.0001" title="per-wallet base ETH (rolled lognormal 0.4x-2.6x)" class="numin wide">
+  <button id="bStart">Start Bots</button>
+  <button id="bStop" disabled>Stop</button>
+  <button id="bOnce" disabled>Trade Once</button>
+  <button id="bMaster" disabled>Master Buy</button>
+  <label class="toggle"><input type="checkbox" id="tGrad"> Allow Graduation</label>
+  <label class="toggle" title="route funding through one-time hop wallets so master never touches bot addresses directly (local houdini-swap clone — the real api is mainnet-only)"><input type="checkbox" id="tStealth"> Stealth Funding</label>
+  <button id="bGrad" disabled>Graduate</button>
+  <button id="bSweep" class="warn">Consolidate</button>
+  <button id="bReset" class="danger">Reset</button>
+</nav>
+
+<main>
+  <section class="chartwrap panel">
+    <div class="charttitle">price (ETH) <span id="priceNow" class="dim"></span></div>
+    <canvas id="chart" width="1100" height="340"></canvas>
+    <div class="progrow">
+      <span class="dim">curve raise</span>
+      <div class="prog"><div id="progfill"></div></div>
+      <span id="proglabel" class="dim">—</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="charttitle">Wallets <span id="wcount" class="dim"></span></div>
+    <table id="wtable">
+      <thead><tr><th>name</th><th>persona</th><th>address</th><th>funded ETH</th><th>volume ETH</th><th>buys</th><th>sells</th></tr></thead>
+      <tbody><tr><td colspan="7" class="dim">no wallets yet</td></tr></tbody>
+    </table>
+  </section>
+
+  <section class="panel">
+    <div class="charttitle">Log</div>
+    <pre id="logpane"></pre>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "chainId": 46630,
+  "rpc": "https://rpc.testnet.chain.robinhood.com",
+  "deployer": "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d",
+  "constants": {
+    "poolManager": "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+    "positionManager": "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+    "permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+    "create2Deployer": "0x4e59b44847b379578588920cA78FbF26c0B4956C"
+  },
+  "steps": {
+    "gasProbe": {
+      "tx": "0x90c9e936fa924cff7baa5615a532d02a916c849075ec95d4cb319b8ca720413c",
+      "gasUsed": "25069",
+      "gasPrice": "10000000"
+    },
+    "locker": {
+      "address": "0x1322BEad2Fc68405c47cF0daf5a34704b5241A26",
+      "gasUsed": "566327",
+      "args": [
+        "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d",
+        "0x58daec3116aae6D93017bAAea7749052E8a04fA7"
+      ],
+      "tx": "0x0d9beedaaab9aa543b10a41c74e29fd55e612223128a884f4f6c2ad167989c62",
+      "block": 117926704
+    },
+    "feeEscrow": {
+      "address": "0xdB186a1Db464144F825DC76B228Aff0C3CB39BEa",
+      "gasUsed": "546267",
+      "args": [],
+      "tx": "0x64ac796d2f95dd3f6ddcbfefd44553444d078829238ec29dbdcca920ceb8bf48",
+      "block": 117926718
+    },
+    "memeHook": {
+      "address": "0xf71276B7A3356bFDA33Ab158F01b614A9843a044",
+      "tx": "0xfe9710b03bb32d9824b035d99c70cb7c243562dec5b7762c4b2140ab64342322",
+      "salt": "0x0000000000000000000000000000000000000000000000000000000000001ec2",
+      "iterations": "7875",
+      "gasUsed": "3848518",
+      "args": [
+        "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+        "0xdB186a1Db464144F825DC76B228Aff0C3CB39BEa",
+        "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d",
+        "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d"
+      ]
+    },
+    "buybackVault": {
+      "address": "0xDCBd0B6E49C6A28403328661b26D85A8255B8155",
+      "gasUsed": "1214954",
+      "args": [
+        "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d",
+        "0xf71276B7A3356bFDA33Ab158F01b614A9843a044",
+        "0xdB186a1Db464144F825DC76B228Aff0C3CB39BEa"
+      ],
+      "tx": "0xfd25cd4e49c42eaba65439cf57b1f429c82bbb98b782db4ea387d0668cf59594",
+      "block": 117926776
+    },
+    "factory": {
+      "address": "0xcdaf36FD8EBB4D5A4fD7b5BD003B229f1267B39C",
+      "gasUsed": "6620982",
+      "args": [
+        "0x7C5A10028a80d8b337E8637D01ecFA8014095e4d",
+        "0x8366a39cc670b4001a1121b8f6a443a643e40951",
+        "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+        "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "0x1322BEad2Fc68405c47cF0daf5a34704b5241A26",
+        "0xf71276B7A3356bFDA33Ab158F01b614A9843a044",
+        "0xdB186a1Db464144F825DC76B228Aff0C3CB39BEa",
+        "0xDCBd0B6E49C6A28403328661b26D85A8255B8155",
+        "500000000000000"
+      ],
+      "tx": "0xd49fe9910dc675f6f216b2cf50d3f837cd87d7196034ecdc3aaf88bd2d75e1bf",
+      "block": 117926802
+    },
+    "launchDeployer": {
+      "address": "0xD53DDd8b90F0C5977e650a2Fb53C0D749aCE7Ced",
+      "gasUsed": "4928642",
+      "args": [
+        "0xcdaf36FD8EBB4D5A4fD7b5BD003B229f1267B39C"
+      ],
+      "tx": "0x360f7c0193f582630093bcfb581ec966874bca9ce53302dc70aa103f0400c32c",
+      "block": 117926826
+    },
+    "graduationExecutor": {
+      "address": "0x368C09A4474270e30113587789ee302B8399c513",
+      "gasUsed": "1121725",
+      "args": [
+        "0x58daec3116aae6D93017bAAea7749052E8a04fA7",
+        "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+        "0x1322BEad2Fc68405c47cF0daf5a34704b5241A26",
+        "0xcdaf36FD8EBB4D5A4fD7b5BD003B229f1267B39C"
+      ],
+      "tx": "0x4c22f96cf40eec29be1e0533db0df3b24e4885fd41f9fce45592f7e317eaa1c0",
+      "block": 117926848
+    }
+  },
+  "wiring": {
+    "hook.setFactory": {
+      "tx": "0xb368085867b4df24e5458f47b072267a18d7c8634a2aa43d1c78ff3cc5aefcc6",
+      "block": 117927772
+    },
+    "hook.setBuybackVault": {
+      "tx": "0x8f9d29b4b84f4fb6b07aadcd8a72bacd3c35ebe7609d985fbf699ba3d10df670",
+      "block": 117927796
+    },
+    "locker.setFactory": {
+      "tx": "0x1a911da693578d9b0e34a2be17d0bcc15ea67b72b83f250229139dbcab3bbe00",
+      "block": 117927819
+    },
+    "vault.setFactory": {
+      "tx": "0xf4a40394cbc72fab1eb6dcdd2bfd67d31722b173051085932cb48a691766af18",
+      "block": 117927841
+    },
+    "factory.setLaunchDeployer": {
+      "tx": "0xa5084a2dd10264c7f15180fa4f71c3e1ae7bbc20555e29147678318886084a8a",
+      "block": 117927869
+    },
+    "factory.setGraduationExecutor": {
+      "tx": "0x797f1fa05355c8701ff0e8f681aad136ff1b7257039d65fe63b5f7eb1bccc9bd",
+      "block": 117927888
+    },
+    "factory.setLaunchForwarder": {
+      "tx": "0xa3d20e2d7ad5c35166d6d20c6640d2e04dbf4dd8679dda7168601af0bf2dbdab",
+      "block": 117927904
+    },
+    "factory.setLaunchEnabled": {
+      "tx": "0xf9a6513aee6ed840a3d78395a7c39eac2033ec74606f7f31c3700d002d4dc153",
+      "block": 117927922
+    },
+    "factory.addLaunchConfig": {
+      "tx": "0x30c26a7c1ff5b8d1d87bc724afb380ad0cc9a9c1cd0a77a86e8f2bfc9ee9e60c",
+      "block": 117927936
+    }
+  },
+  "launch": {
+    "token": "0x6bF1b8c887693DA370A76989DE4182537d8571aF",
+    "curve": "0x96e5134B0cd62611965f270416E08BE867291535",
+    "threshold": "4200000000000000000",
+    "configId": 0,
+    "txHash": "0x0bb77d63ebbe5f0aab55483510b71eef43d4617b6fd9841f1d060f373ac72475",
+    "block": 117928941,
+    "name": "Testnet Volume",
+    "symbol": "TESTVOL",
+    "gasUsed": "3499398"
+  },
+  "trades": {
+    "buy": {
+      "txHash": "0x103b3c245942d4d6de74c838aa60f7c40e8bdd6fa5ccec92e39213b71052958c",
+      "block": 117928971,
+      "gasUsed": "153989",
+      "ethIn": "0.01",
+      "ethDeltaInclGas": "-10001539890000000",
+      "tokenDelta": "5740664023199384506125347",
+      "tokenDeltaEth": "5740664.023199384506125347"
+    },
+    "sell": {
+      "txHash": "0x2aba709b637106c1b2464cc53998cab0f7f8e9f5844212d39e62332fc0314237",
+      "block": 117929013,
+      "gasUsed": "86783",
+      "approveTx": "0xf4025f10a20915db2e3a1f659d2ffb566ed80b096ac54188bd3bde3271d2b97f",
+      "tokensIn": "5740664023199384506125347",
+      "tokensInEth": "5740664.023199384506125347",
+      "ethDelta": "9408132170000001",
+      "ethDeltaEth": "0.009408132170000001",
+      "tokenDelta": "-5740664023199384506125347"
+    }
+  },
+  "labLaunches": [
+    {
+      "token": "0x06891846Ed572D91589ad8DF431F0a40f4A62F41",
+      "curve": "0x756cF541262Cc239D55035950805708e1142F679",
+      "txHash": "0x83ca3d31c49cbb7c729951e17df1771ba7ddb4c2c7e44ed02dcd4e32215dff49",
+      "block": 117962277,
+      "ts": 1789200479437
+    },
+    {
+      "token": "0x31Da0C063cb0903BdE4fC56B9052D9379ce860bd",
+      "curve": "0x4ceB37c89252a36B918cc510C5A42a91C87785d5",
+      "txHash": "0xc394a9c8f74058ea54c367747d4c78324cdc8fd1ef42080561817a6ce0066e7e",
+      "block": 117977867,
+      "ts": 1789202570529
+    }
+  ]
+}

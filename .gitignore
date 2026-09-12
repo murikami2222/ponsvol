@@ -1,0 +1,8 @@
+.env
+node_modules/
+state.json
+fork-dump.json
+cache/
+*.log
+deploy/artifacts/
+deploy/cache/
